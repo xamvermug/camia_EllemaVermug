@@ -19,137 +19,60 @@ My program aims to achieve the following goals:
 
 • To develop a Python-based task management system that allows students to record tasks, mark them as completed, and calculate the total hours required to finish remaining work, thereby promoting better time management through a simple and intuitive interface.
 
+# Planned inputs and outputs:
+
+
+Inputs:
+
+The program gathers specific details from the student through an easy-to-use input form:
+
+Task Name: A short description of the assignment (e.g., "Math Worksheet").
+
+Estimated Hours: A numerical value representing how long the task will take.
+
+Priority Level: A selection from a dropdown menu (High, Medium, or Low).
+
+Outputs:
+
+The program processes the inputs to provide the following visual feedback:
+
+Dynamic Task Table: A structured display showing the Name, Hours, Priority, and Status (Pending/Done) for every task.
+
+Remaining Hours Summary: A live calculation shown at the bottom of the window totaling the hours needed for all unfinished work.
+
+Status Indicators: Visual cues (like the "✓ Done" label) that give students a satisfying sense of progress.
+
+System Alerts: Pop-up messages that confirm when a task is saved or warn the user if a field was filled out incorrectly.
+
 # Planned Features:
-• Let students input their task name, due date, estimated hours, and priority level (High, Medium, or Low).
-
-• Display all the current tasks, showing which ones are done or still pending.
-
-• Allow students to update the status of a task once it is finished.
-
-• Automatically calculate the total estimated time left for all unfinished tasks.
-
-• Include a simple menu where students can easily add, view, or mark their tasks as complete.
-
-• Provide an option to exit the program once they are done managing their tasks.
-
-# Planned Inputs and Outputs:
-The program will first ask students to enter the details of their tasks, such as:
-The name, Due date, Number of hours needed, Priority     
-(High, Medium, or Low) After that, the program will store these tasks and show them in an organized list.
-For every task, it will display whether it is Pending or Done. 
-Students can also choose to mark a task as completed once they finish it. 
-Additionally, the program will show the total remaining hours of all pending tasks, 
-helping students estimate how much time they still need to manage their schoolwork.
-Through these simple inputs and outputs, 
-The program will make it easier for students to track their responsibilities, manage their schedules, and stay productive every day.
 
 
+- Interactive Graphical User Interface (GUI): A clean, window-based application that replaces the command-line interface for better accessibility.
 
+- Smart Task Prioritization: Automatically sorts the task list so that High Priority items stay at the top, helping students focus on urgent work first.
 
+- Persistent Data Storage: Uses JSON file handling to ensure all tasks are saved automatically. Students can close the app and return later without losing their data.
 
-# Methodology
+- Real-Time Workload Calculation: A built-in calculator that sums up the estimated hours of all "Pending" tasks to give an immediate view of the remaining workload.
 
+- Input Validation & Error Handling: Includes safety checks to prevent the program from crashing if a student enters invalid information (like typing letters instead of numbers for hours).
 
-To build the Time Organizer, we used a step-by-step plan to turn a student's busy schedule into a simple, organized list.
+- Task Lifecycle Management: Simple buttons to add new tasks, mark existing ones as "Done," or permanently delete completed or irrelevant items..
 
-
-1. Core Feature Implementation
-The program works like a smart assistant.
-
-• We wrote code that asks the student for four specific things: the name, date, hours, and priority.
-
-• We programmed a "Priority Rule." This ensures that any task labeled High automatically jumps to the top of the list so the student sees it first.
-
-
-2. Technologies Used
-We chose Python as our main tool.
-
-• Why Python? It is easy to read and write, which helped us build the menu and the calculator quickly.
-
-• Why Lists? We used lists to store the tasks because they are like digital folders that keep information in the right order.
-
-
-3. System Communication
-
-• The program uses a Simple Menu to talk to the student.
-
-• When a student types a number (1, 2, or 3), the program opens the corresponding section.
-
-• The Output is a clean table that shows the status of every task as either "Pending" or "Done."
-
-
-4. Key Design Decisions
-
-
-• We choose to make the program work fast and run smoothly instead of adding heavy pictures or fancy colors..
-
-• Instead of adding heavy pictures or colors, we used a text-based design. This makes the program run instantly on any school computer.
-
-• We also decided to include a Live Calculator that updates the total hours every time a task is finished.
-
-
-5. Ethical Considerations
-
-
-We built this program to be fair and safe for all students.
-
-- Privacy: All task data stays on the student's own computer. It is not sent to the internet, keeping their school life private.
-
-- Accessibility: By using a clear table and simple ID numbers (1, 2, 3) to mark tasks as done, the program is easy to use for students who might find complex apps confusing.
 
 
 
 
 # Scenario: Monday Morning Planning
 
-In this scenario, we will add three tasks in a random order. You will see the program automatically "move" the High Priority task to the top.
+It’s 7:30 AM on a Monday, and Therenz just sat down at his desk to start the school week. He has a lot on his plate: a History essay, a Biology lab report, and a Math problem set. Normally, he’d feel a bit scattered trying to remember what’s due when, but today he opens "The Time Organizer."
+
+Logging the Week: Therenz starts by entering his tasks into the GUI. He types in "History Essay," sets the hours to "3," and selects High Priority because it’s a major grade. He then adds his Biology and Math assignments.
+
+Instant Organization: As soon as he hits "Add Task," the program springs into action. Even though he entered the Math homework last, the program automatically bumps the High Priority History essay to the top of the table. He can see at a glance that his total workload for the week is 6 hours.
+
+Staying on Track: By lunch, Therenz has finished his Math problems. Instead of crossing it out with a messy pen on paper, he simply clicks the task in the window and hits "Mark Complete." The status instantly updates to "✓ Done." Looking at the summary at the bottom, he sees his remaining work has dropped to 4 hours.
+
+The Stress-Free Finish: Because the program saved his data to a file, Therenz can close his laptop and head to practice. He doesn't have to worry about forgetting the Biology lab report because the program is holding that information for him, organized and ready for when he returns.
 
 
-
-1. Adding Tasks (User Input)
-
-Action 1: Select 1 (Add Task)
-Name: Math Homework | Due: 2026-02-05 | Hours: 2 | Priority: Medium
-
-Action 2: Select 1 (Add Task)
-Name: CS Project | Due: 2026-02-03 | Hours: 5 | Priority: High
-
-Action 3: Select 1 (Add Task)
-Name: Read Chapter 1 | Due: 2026-02-10 | Hours: 1 | Priority: Low
-
-
-
-2. Viewing the List (Program Output)
-
-When you select 2 (View List), the program will display the tasks sorted by priority:
-
- ==== Student Time Management ====
-
-Add Task | 2. View (High Prio First) | 3. Mark Done | 4. Exit
-
-
-Choice: 2
-
-
-ID | TASK NAME      | DUE DATE   | PRIO   | STATUS
-
-1  | CS Project     | 2026-02-03 | High   | Pending
-
-2  | Math Homework  | 2026-02-05 | Medium | Pending
-
-3  | Read Chapter 1 | 2026-02-10 | Low    | Pending
-
-TOTAL REMAINING HOURS: 8.0
-
-
-
-3. Marking a Task Complete
-
-Action: Select 3 (Mark Done)
-
-Input: Enter 1 (To finish the CS Project)
-
-Enter ID number to mark complete: 1
-Updated successfully!
-
-TOTAL REMAINING HOURS: 3.0
